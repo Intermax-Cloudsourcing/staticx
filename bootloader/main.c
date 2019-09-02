@@ -204,7 +204,7 @@ patch_app(const char *prog_path)
 static char *
 create_tmpdir(void)
 {
-    static char template[] = "/tmp/staticx-XXXXXX";
+    static char template[] = "/dev/shm/staticx-XXXXXX";
     char *tmpdir = mkdtemp(template);
     if (!tmpdir)
         error(2, errno, "Failed to create tempdir");
